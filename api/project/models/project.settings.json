@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Summary": {
+      "type": "text",
+      "required": true
+    },
+    "Content": {
+      "type": "richtext",
+      "required": true
+    },
+    "Published": {
+      "type": "date",
+      "required": true
+    },
+    "Slug": {
+      "type": "string",
+      "regex": "/^[a-z0-9]+(?:-[a-z0-9]+)*$/",
+      "unique": true,
+      "required": true
+    }
+  }
+}
